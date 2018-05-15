@@ -10,7 +10,7 @@ router.post('/writefile', function (req, res, next) {
 
   var gitUrl = req.body.gitUrl;
   var repoBranch = req.body.repoBranch;
-  var fileName = 'file-' + new Date().getTime() + '.yml';
+  var fileName = 'varibles' + '.yml';
   var content = `
         ---
         jobName: '`+ req.body.jobname + `'
