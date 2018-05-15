@@ -1,0 +1,6 @@
+---
+is_vm: true
+
+# Jenkins
+jenkins_admin_email: 'TEST Jenkins &lt;jenkins@strive-ltd.com&gt;'
+jenkins_external_url: http://{{ ansible_default_ipv4.address }}:{{ jenkins_http_port }}

@@ -1,0 +1,7 @@
+---
+is_vm: false
+ansible_ssh_user: root
+
+# Jenkins
+jenkins_admin_email: 'STRIVE Jenkins &lt;jenkins@strive-ltd.com&gt;'
+jenkins_external_url: http://jubilee.homeip.net:82
