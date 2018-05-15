@@ -1,0 +1,15 @@
+---
+jobName: 'innominds'
+#description: 'Builds and tests the Geldzin4 web application, with sources in BitBucket.'
+#projectUrl: https://bitbucket.org/jmiremba/geldzin4dev/
+#displayName: 'Development project on BitBucket'
+gitUrl: 'git@192.168.201.243:myspacenx'
+repoBranch: '*/jenkins2'
+#browserClass: 'hudson.plugins.git.browser.BitbucketWeb'
+#browserUrl: 'https://bitbucket.org/jmiremba/geldzin4dev'
+#scmPolling: 'H/10 * * * *'
+#mavenGoals: 'clean cobertura:cobertura site:site site:stage -Pjenkins_sanity'
+#mavenJvmOptions: '-Dgeldzin.config=/var/builds/geldzin4/geldzin.properties'
+#ansibleInventory: ansible/ansible.inventory
+#ansibleTestPrepPlaybook: ansible/test-preparation.yml
+#ansibleTestConclPlaybook: ansible/test-conclusion.yml

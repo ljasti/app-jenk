@@ -14,6 +14,7 @@ FROM node:carbon
 
 # Bundle app source
 COPY app1 /opt/appdata/app1
+COPY app1 /opt/appdata/jenkinsplaybook
 RUN apt-get update 
 RUN apt-get install curl
 RUN apt-get install git
@@ -30,4 +31,4 @@ RUN cd /opt/appdata/app1
 RUN npm update &&  npm install -g --unsafe-perm @angular/cli@latest tslint typescript
 CMD [ "npm", "start" ]
 RUN chmod +x /opt/appdata/app1/build.sh
-
+EXPOSE 8000
