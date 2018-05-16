@@ -30,9 +30,9 @@ router.post('/writefile', function (req, res, next) {
   `
   var destPath = '../build' + i;
   if (!fs.existsSync(destPath)) {
-    fse.copy('builds', destPath)
+    fse.copy('jenkinsplaybook', destPath)
       .then(() => {
-        fs.writeFile(destPath + '/jenkins/test/' + fileName, content, function (err) {
+        fs.writeFile(destPath + '/jenkins/innomindstest/' + fileName, content, function (err) {
           if (err) {
             res.send('Unable to Generate Directory');
           } else {

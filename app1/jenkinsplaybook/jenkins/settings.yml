@@ -1,0 +1,10 @@
+---
+# Jenkins
+jenkins_home_dir: /var/lib/jenkins
+jenkins_jobs_dir: '{{ jenkins_home_dir }}/jobs'
+
+
+# Jobs
+builds_jobs_dir: jenkins
+build_jobs:
+  - innomindstest
