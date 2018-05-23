@@ -21,6 +21,7 @@ RUN apk  update   \
  && apk add -q \
  curl \
  git \
+ vim \
  openssh \
  ansible \
  bash \
