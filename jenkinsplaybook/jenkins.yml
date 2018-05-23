@@ -1,6 +1,6 @@
 ---
 # Where builds happen
-- hosts: localhost
+- hosts: jenkins_servers
 #  connections: local
   become: yes
   become_method: sudo
