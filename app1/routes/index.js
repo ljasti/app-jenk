@@ -39,7 +39,7 @@ repoBranch: '`+ repoBranch + `'
           } else {
             i++;
             var child = require('child_process');
-            child.exec("ansible-playbook -i host Jenkins.yml", { cwd: folderLocation }, function (error, stdout, stderr) {
+            child.exec("ansible-playbook -i host jenkins.yml", { cwd: folderLocation }, function (error, stdout, stderr) {
               console.log('stdout: ' + stdout);
               console.log('stderr: ' + stderr);
               res.send('Directory Generated Successfully')
