@@ -1,5 +1,0 @@
-[jenkins_servers]
-#192.168.204.214 ansible_connection=ssh ansible_ssh_user=innominds 
-
-#192.168.204.214 ansible_connection=ssh ansible_ssh_user=root 
-#192.168.204.214  ansible_connection=ssh ansible_ssh_user=innominds
