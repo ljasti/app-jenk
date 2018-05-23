@@ -15,9 +15,9 @@ FROM node:carbon
 # Bundle app source
 COPY app1 /opt/appdata/app1
 COPY app1 /opt/appdata/jenkinsplaybook
-RUN apt-get update 
-RUN apt-get install curl
-RUN apt-get install git
+RUN apt-get update -y
+RUN apt-get install curl -y
+RUN apt-get install git -y 
 #RUN apt-get install openssh 
 RUN apt-get install ansible -y 
 RUN apt-get install bash 
