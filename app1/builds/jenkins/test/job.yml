@@ -3,7 +3,7 @@
 - include_vars: jenkins/innomindstest/variables.yml
 
 - stat:
-    path: /var/lib/jenkins/jobs/{{ jobName }}
+    path: "{{ jenkins_jobs_dir }}/{{ jobName }}"
   register: result
 
 - debug:
