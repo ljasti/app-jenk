@@ -2,18 +2,32 @@
 # Variables
 - include_vars: jenkins/innomindstest/variables.yml
 
+- stat:
+    path: /var/lib/jenkins/jobs/{{ jobName }}
+  register: result
+
+- debug:
+    msg: "Ansible When File Exists Example."
+  when: result.stat.exists
+
+- name: build exists job
+  shell: java -jar /var/cache/jenkins/war/WEB-INF/jenkins-cli.jar -s http://192.168.204.214:8080 build {{ jobName }} --username "myspacenx" --password "innominds123$"
+  when: result.stat.exists == True
 
 # Directory
 - name: Jenkins jobs directory
   file:
     path: "{{ jenkins_jobs_dir }}/{{ jobName }}"
     state: directory
-    owner: jenkins
+#    owner: jenkins
 #    sudo: yes
 # Job configuration
+  when: result.stat.exists == False
+
 - name: Jenkins build job configuration
   template:
     src: config.xml.j2
     dest: "{{ jenkins_jobs_dir }}/{{ jobName }}/config.xml"
 #    become: True
   notify: Restart Jenkins
+  when: result.stat.exists == False
