@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 var fse = require('fs-extra');
-/* GET home page. */
+/* GET home page.*/
 var i = 1;
 
 
